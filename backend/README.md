@@ -1,8 +1,8 @@
-# Simple React Todo List with Filtering
+# API with basic validation and error handling
 
 by **Petar Yankov**
 
-A lightweight Express + TypeScript backend API with in-memory storage for items.
+A lightweight Express + TypeScript backend API with in-memory storage for handling items.
 
 ---
 
@@ -22,7 +22,7 @@ Make sure you have the following installed:
 1. **Navigate to the backend folder:**
 
 ```bash
-cd simami/backend
+cd awbvaeh/backend
 ```
 
 2. **Install dependencies:**
@@ -40,8 +40,11 @@ npm start
 4. **Expected Output:**
 
 ```bash
-> backend@0.0.0 start
-> ts-node server.ts
+[nodemon] 3.1.10
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: ts,json
+[nodemon] starting `ts-node server.ts`
 
 > Server is running
 > Listening on http://localhost:8000
@@ -53,9 +56,12 @@ npm start
 
 ### Postman Collection
 
-[View Postman Documentation with working requests](https://www.postman.com/galactic-escape-205994/workspace/new-team-workspace/collection/31467064-4e272c54-bf75-419c-9344-18512f2ddd6e?action=share&creator=31467064&active-environment=31467064-0d78c08b-6f76-424e-b21c-ceba3d682099)
+[View Postman Documentation with working requests](https://www.postman.com/galactic-escape-205994/workspace/new-team-workspace/collection/31467064-f7704f1c-e037-4084-ad7f-85d5559c6e2e?action=share&creator=31467064&active-environment=31467064-9027d7c7-aa93-4548-b7dd-79bff9196896)
 
-| Method | Endpoint        | Description |
-| :----- | :-------------- | :---------- |
-| `GET`  | `/routes/items` | get items   |
-| `POST` | `/routes/items` | create item |
+| Method   | Endpoint            | Description         |
+| :------- | :------------------ | :------------------ |
+| `GET`    | `/routes/items`     | get items           |
+| `POST`   | `/routes/items`     | create item         |
+| `GET`    | `/routes/items/:id` | get item with ID    |
+| `DELETE` | `/routes/items/:id` | delete item with ID |
+| `UPDATE` | `/routes/items/:id` | update item with ID |
